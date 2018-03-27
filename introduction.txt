@@ -1,0 +1,29 @@
+#Part 1 
+In emerging applications, such as social networks and business to business networks,  graphs are used to capture the complex relationships inherent. Sometimes, the existence of the relationship between two entities is uncertain. For instance, in social networks, nodes represents individual users, while edges represent friendship or trust link among them,.  Usually , the link is derived by inference and prediction models built on interaction details, and edge probability denotes the accuracy of a link prediction, or the trust of one person on another. In these applications, the data can be modeled and shared as uncertain graphs whose edges carries a probability of existence. The probability represents the confidence that the relationship holds in reality. 
+
+These uncertain graphs are invaluable for scientific research and commercial applications~\cite{Kempe_Maximizing_2003,Cho_Friendship_2011}. However, sharing these uncertain graphs would violate the privacy of users or entities profiled inside. For example, in social trust network, the trust relationships among users---which  greatly impact users' behaviors, are usually probabilistic.  They are useful in social interaction study, micro targeting.
+
+
+#Part 2 
+While, users are unwilling to share such confidential information with potential adversaries like Cambridge Analysis Company. In B2B networks, companies are unwilling to share their transaction patterns. Such tension is arising the question about sharing uncertain graphs without compromising privacy. 
+
+#Part 3 
+A number of privacy preserving graph sharing schemes have been studied in the deterministic scenario, though many problems about sharing uncertain graphs still remain unexplored. Either the ignorance or miscasting of edge probabilities makes existing schemes inefficient for sanitizing uncertain graphs. In contrast, our work seeks a solution tailored towards uncertain graphs via incorporating possible world semantics. Chameleon preserves as much the stochastic nature of the original uncertain graph as possible, while injecting enough structural noise to guarantee a chosen level of privacy against re-identification attacks. 
+
+#Part 4 
+To achieve this goal, the following issues need be carefully addressed.
+1. Stochastic Privacy Attacks.  Edge uncertainty plays an indispensable role in uncertain graph model. It is impractical to discard them.  However, the additional release makes privacy protection far more difficult since it would empower the adversary and make the profiled entity more vulnerable to privacy attacks.
+2. It is very challenging to maintain much stochastic nature when the uncertain graph is modified to pursue anonymity. The choice of utility loss metric does matter. Unfortunately, existing graph utility loss metrics such as graph edit distance, spectrum discrepancy and shortest path discrepancy are not good candidates because of the disregarding of edge probability. 
+3. In the deterministic scenario, it is NP-hard to find a sanitized graph with the desired level of privacy by as few graph contractions as possible. In the uncertain scenario, the edge modification is no longer a binary operation (addition/deletion), but can be infinite probability values. Exhaustive search is computationally intractable if the number of edges is large.
+
+#Part 5
+We first present another option (Rep-Ob) which first extracts a single representative instance from an uncertain graph as its approximation, then convert the problem into the deterministic case. Yet, this approach is shown to be problematic. The detachment of probabilities in the first step deteriorates the data utility.
+In Chameleon, we address the problems above.  
+1. Initially, we present  potential kind of re-identification attacks and formulate an extended version of syntactic privacy notation. 
+2. In this context, we notice that standard uncertain graph reliability 
+discrepancy become a good criterion, because it evaluates the connectivity difference in the context of the entire graph and meanwhile utilizes the possible world model. 
+3. We approximate the problem of interest via a randomized algorithm, which built on the basis of meta-heuristics. It excels in identifying a population of sanitized results with good quality.
+For more detail of our algorithm, feel free to scan QR code to get full text of our paper or email us. 
+
+#Part 6 
+We apply our method to real uncertain graphs and show that it produces sanitized graphs that closely match the original uncertain graphs. The combination of meta-heuristics boosts the performance. 
